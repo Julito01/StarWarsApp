@@ -26,9 +26,8 @@ class MainViewModel: ViewModel() {
                 Log.d(_TAG, "Characters onSuccess")
                 characters.postValue(it)
             }.onFailure {
-                Log.e(_TAG, "Charactes onFailure")
+                Log.e(_TAG, "Characters onFailure$it")
             }
-
         }
     }
 }

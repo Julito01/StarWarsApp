@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">StarWarsApp</string>
+    <string name="bg_image">Main background image</string>
+    <string name="home_button">Inicio</string>
+    <string name="favorites_button">Favoritos</string>
+    <string name="movies_button">Películas</string>
+    <string name="worlds_button">Mundos</string>
+    <string name="characters_button">Personajes</string>
+    <string name="character_image">Imagen del personaje</string>
+    <string name="character_height_label">Altura:</string>
+    <string name="character_birthyear_label">Nacimiento:</string>
+    <string name="favorite_button">Favorite icon</string>
+    <string name="login_button">Iniciar Sesión</string>
+    <string name="exit_button">Salir</string>
+    <string name="back_button">Volver</string>
+    <string name="world_label_text">Planeta: %s</string>
+    <string name="year_label_text">Año: %s</string>
+    <string name="hair_label_text">Color de pelo: %s</string>
+    <string name="gender_label_text">Género: %s</string>
 </resources>

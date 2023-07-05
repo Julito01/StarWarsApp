@@ -8,4 +8,8 @@ class CharactersRepository {
     suspend fun getCharacters(): ArrayList<Character>? {
         return charactersDataSource.getCharacters()
     }
+
+    suspend fun getHomeworld(url: String): String? {
+        return charactersDataSource.getHomeworld(url)
+    }
 }

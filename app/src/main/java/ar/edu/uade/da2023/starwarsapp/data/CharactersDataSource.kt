@@ -27,10 +27,33 @@ class CharactersDataSource {
         val response = starWarsAPI.getCharacters().execute()
 
         if (!response.isSuccessful) {
-            Log.d(_TAG, response.message())
+            Log.e(_TAG, response.message())
             return ArrayList<Character>()
         }
 
-        return response.body()
+        Log.d(_TAG, "Characters DataSource Success")
+        val characters = response.body()?.results
+
+        if (characters != null) {
+            for (character in characters) {
+                character.homeWorld = getHomeworld(character.homeWorld)
+            }
+        }
+
+        return characters
+    }
+
+    suspend fun getHomeworld(url: String): String {
+        Log.d(_TAG, "Planets DataSource GET")
+
+        val response = starWarsAPI.getHomeworld(url).execute()
+
+        if (!response.isSuccessful) {
+            Log.e(_TAG, response.message())
+            return "n/a"
+        }
+
+        Log.d(_TAG, "Planet DataSource Success")
+        return response.body()?.name ?: "n/a"
     }
 }
